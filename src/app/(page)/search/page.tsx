@@ -1,7 +1,9 @@
+import Section1 from "./Section1";
+
 export default function SearchPage() {
   return (
     <>
-      <h1 className="text-[32px] font-[700]">Trang kết quả tìm kiếm</h1>
+      <Section1 />
     </>
   );
 }

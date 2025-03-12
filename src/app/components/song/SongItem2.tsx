@@ -24,7 +24,7 @@ export default function SongItem2(props: any) {
 
         {/* Center */}
         <div className="w-[30%] text-center">
-          <div className="font-[400] text-[14px] text-white">{title}</div>
+          <div className="font-[400] text-[14px] text-white">{singer}</div>
         </div>
         {/* End Center */}
 
