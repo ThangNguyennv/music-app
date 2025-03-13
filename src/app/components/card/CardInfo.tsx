@@ -7,7 +7,7 @@ export default function CardInfo(props: any) {
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
         <div className="flex-1 ml-[20px]">
-          <h1 className="font-[700] text-[35px] text-[#00ADEF]">Nhạc Trẻ</h1>
+          <h1 className="font-[700] text-[35px] text-[#00ADEF]">{title}</h1>
           <div className="font-[400] text-[14px] text-[#EFEEE0] mt-[10px]">
             {description}
           </div>
