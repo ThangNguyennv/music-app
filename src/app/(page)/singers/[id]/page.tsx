@@ -1,18 +1,16 @@
 import CardInfo from "@/app/components/card/CardInfo";
-import Section2 from "../Section2";
+import Section2 from "./Section2";
+import Section1 from "./Section1";
 
-export default function SingerDetailPage() {
+export default async function SingerDetailPage({ params }: any) {
+  const { id } = await params;
   return (
     <>
       {/* Card Info */}
-      <CardInfo
-        image="/demo/image-8.png"
-        title="Sơn Tùng M-TP"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-      />
+      <Section1 id={id} />
       {/* End Card Info */}
       {/* Danh sách bài hát */}
-      <Section2 />
+      <Section2 id={id} />
       {/* End Danh sách bài hát */}
     </>
   );
