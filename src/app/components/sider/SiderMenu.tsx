@@ -1,13 +1,24 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { authFirebase } from "@/app/firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 import { FaHeart, FaMusic, FaPodcast, FaRegUser } from "react-icons/fa6";
 import { FiLogOut, FiUserPlus } from "react-icons/fi";
 import { IoMdHome } from "react-icons/io";
+import SiderMenuItem from "./SiderMenuItem";
 
 export default function SiderMenu() {
-  const pathName = usePathname();
-  console.log(pathName);
+  const [isLogin, SetisLogin] = useState<Boolean>();
+
+  useEffect(() => {
+    onAuthStateChanged(authFirebase, (user) => {
+      if (user) {
+        SetisLogin(true);
+      } else {
+        SetisLogin(false);
+      }
+    });
+  }, []);
   const menu = [
     {
       icon: <IoMdHome />,
@@ -28,21 +39,25 @@ export default function SiderMenu() {
       icon: <FaHeart />,
       title: "Bài hát yêu thích",
       link: "/wishlist",
+      isLogin: true,
     },
     {
       icon: <FiLogOut />,
       title: "Đăng xuất",
       link: "/logout",
+      isLogin: true,
     },
     {
       icon: <FaRegUser />,
       title: "Đăng nhập",
       link: "/login",
+      isLogin: false,
     },
     {
       icon: <FiUserPlus />,
       title: "Đăng ký",
       link: "/register",
+      isLogin: false,
     },
   ];
   return (
@@ -50,18 +65,7 @@ export default function SiderMenu() {
       <nav className="py-[30px] px-[20px]">
         <ul className="">
           {menu.map((item, index) => (
-            <li className="mb-[30px]" key={index}>
-              <Link
-                href={item.link}
-                className={
-                  "flex items-center hover:text-[#00ADEF] capitalize " +
-                  (pathName === item.link ? "text-[#00ADEF]" : "text-white")
-                }
-              >
-                <span className="text-[20px] mr-[20px]">{item.icon}</span>
-                <span className="text-[16px] font-[700]">{item.title}</span>
-              </Link>
-            </li>
+            <SiderMenuItem item={item} isLogin={isLogin} key={index} />
           ))}
         </ul>
       </nav>

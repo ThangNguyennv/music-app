@@ -3,3 +3,17 @@
 * {
     font-family: "Quicksand", sans-serif;
 }
+
+/* play-audio */
+.play-audio .inner-button-play .inner-icon-pause{
+    display: none;
+}
+
+.play-audio .inner-button-play.play .inner-icon-pause{
+    display: block;
+}
+
+.play-audio .inner-button-play.play .inner-icon-play{
+    display: none;
+}
+/* End play-audio */

@@ -1,9 +1,12 @@
+import { Suspense } from "react";
 import Section1 from "./Section1";
 
 export default function SearchPage() {
   return (
     <>
-      <Section1 />
+      <Suspense>
+        <Section1 />
+      </Suspense>
     </>
   );
 }

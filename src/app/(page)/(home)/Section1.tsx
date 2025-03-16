@@ -21,6 +21,8 @@ export default function Section1() {
           listen: data[key].listen,
           singerId: data[key].singerId,
           link: `song/${key}`,
+          audio: data[key].audio,
+          wishlist: data[key].wishlist,
         }));
 
         songsArray = songsArray.slice(0, 3);
@@ -58,18 +60,21 @@ export default function Section1() {
         </div>
         <div className="flex-1 ml-[20px]">
           <Title text="Nghe nhiều" />
-          <div className="grid grid-cols-1 gap-[12px]">
+          <div className="grid grid-cols-1 gap-[12px]" song-list="">
             {dataFinal && (
               <>
                 {/* Item */}
                 {dataFinal.map((item: any) => (
                   <SongItem
                     key={item.id}
+                    id={item.id}
                     image={item.image}
                     title={item.title}
                     singer={item.singer}
                     listen={item.listen}
                     link={item.link}
+                    audio={item.audio}
+                    wishlist={item.wishlist}
                   />
                 ))}
                 {/* End Item */}

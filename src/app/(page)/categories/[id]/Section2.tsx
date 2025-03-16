@@ -24,6 +24,8 @@ export default function Section2(props: { id: string }) {
           singerId: data[key].singerId,
           categoryId: data[key].categoryId,
           time: "4:32",
+          audio: data[key].audio,
+          wishlist: data[key].wishlist,
         }));
 
         songsArray = songsArray.filter((item) => item.categoryId === id);

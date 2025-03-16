@@ -24,6 +24,7 @@ export default function Section2(props: { id: string }) {
           singerId: data[key].singerId,
           categoryId: data[key].categoryId,
           time: "4:32",
+          audio: data[key].audio,
         }));
         songsArray = songsArray.filter((item) => item.singerId.includes(id));
         setDataFinal(songsArray);

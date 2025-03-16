@@ -1,7 +1,20 @@
+"use client";
+
+import { authFirebase } from "@/app/firebaseConfig";
+import { signOut } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 export default function LogoutPage() {
-  return (
-    <>
-      <h1 className="text-[32px] font-[700]">Trang đăng xuất</h1>
-    </>
-  );
+  const router = useRouter();
+  useEffect(() => {
+    signOut(authFirebase)
+      .then(() => {
+        router.push("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  return <></>;
 }

@@ -1,11 +1,15 @@
 import Link from "next/link";
-import { FaHeart, FaPlay } from "react-icons/fa6";
+import ButtonPlay from "../button/ButtonPlay";
+import ButtonHeart from "../button/ButtonHeart";
 
 export default function SongItem(props: any) {
-  const { image, title, singer, listen, link } = props;
+  const { id, image, title, singer, listen, link } = props;
   return (
     <>
-      <div className="bg-[#212121] rounded-[15px] p-[10px] flex items-center">
+      <div
+        className="bg-[#212121] rounded-[15px] p-[10px] flex items-center"
+        data-song={id}
+      >
         <div className="w-[76px] aspect-square rounded-[10px] truncate mr-[10px]">
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
@@ -26,12 +30,11 @@ export default function SongItem(props: any) {
         </div>
 
         <div className="">
-          <button className="w-[34px] h-[34px] rounded-full border border-white inline-flex items-center justify-center text-[15px] text-white ml-[10px]">
-            <FaPlay />
-          </button>
-          <button className="w-[34px] h-[34px] rounded-full border border-white inline-flex items-center justify-center text-[15px] text-white ml-[10px]">
-            <FaHeart />
-          </button>
+          <ButtonPlay
+            {...props}
+            className="w-[34px] h-[34px] rounded-full border border-white inline-flex items-center justify-center text-[15px] text-white inner-button-play"
+          />
+          <ButtonHeart {...props} />
         </div>
       </div>
     </>
