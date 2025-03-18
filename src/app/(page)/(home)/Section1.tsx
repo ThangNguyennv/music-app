@@ -1,4 +1,5 @@
 "use client";
+// @typescript-eslint/no-explicit-any
 
 import SongItem from "@/app/components/song/SongItem";
 import Title from "@/app/components/title/Title";
