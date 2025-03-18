@@ -1,4 +1,4 @@
-import Title from "@/app/components/title/Title";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Section3 from "./Section3";
 import Section1 from "./Section1";
 import Section2 from "./Section2";

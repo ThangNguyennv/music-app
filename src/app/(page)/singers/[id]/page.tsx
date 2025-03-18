@@ -1,4 +1,4 @@
-import CardInfo from "@/app/components/card/CardInfo";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Section2 from "./Section2";
 import Section1 from "./Section1";
 
