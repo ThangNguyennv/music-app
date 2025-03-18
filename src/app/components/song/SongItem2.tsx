@@ -1,4 +1,5 @@
-import { FaPlay, FaRegHeart } from "react-icons/fa6";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @next/next/no-img-element */
 import ButtonPlay from "../button/ButtonPlay";
 import ButtonHeart2 from "../button/ButtonHeart2";
 

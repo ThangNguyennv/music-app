@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @next/next/no-img-element */
 export default function CardInfo(props: any) {
   const { image, title, description } = props;
   return (

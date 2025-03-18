@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { authFirebase, dbFirebase } from "@/app/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import { ref, runTransaction } from "firebase/database";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
 export default function ButtonHeart2(props: any) {

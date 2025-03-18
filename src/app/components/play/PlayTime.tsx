@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 export default function PlayTime() {
   const handleChange = (event: any) => {

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import CardInfo from "@/app/components/card/CardInfo";
@@ -22,7 +24,6 @@ export default function Section1(props: { id: string }) {
       }
     });
   }, []);
-  console.log(dataFinal);
   return (
     <>
       {/* Card Info */}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-wrapper-object-types */
 "use client";
 import { authFirebase } from "@/app/firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";

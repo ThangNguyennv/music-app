@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-// @typescript-eslint/no-explicit-any
 
 import SongItem from "@/app/components/song/SongItem";
 import Title from "@/app/components/title/Title";
